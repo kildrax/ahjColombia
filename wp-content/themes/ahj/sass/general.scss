@@ -2,52 +2,52 @@
 @import "variables.scss";
 
 /*Fonts declarations*/
-@font-face { 
-    font-family: 'Myriad_Pro_Semibold';
-    src: url('../assets/fonts/MyriadPro-Semibold.woff2') format('woff2'),
-        url('../assets/fonts/MyriadPro-Semibold.woff') format('woff'),
-        url('../assets/fonts/MyriadPro-Semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+@font-face {
+  font-family: "Myriad_Pro_Semibold";
+  src: url("../assets/fonts/MyriadPro-Semibold.woff2") format("woff2"),
+    url("../assets/fonts/MyriadPro-Semibold.woff") format("woff"),
+    url("../assets/fonts/MyriadPro-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Myriad_Pro_Bold';
-    src: url('../assets/fonts/MyriadPro-Bold.woff2') format('woff2'),
-        url('../assets/fonts/MyriadPro-Bold.woff') format('woff'),
-        url('../assets/fonts/MyriadPro-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Myriad_Pro_Bold";
+  src: url("../assets/fonts/MyriadPro-Bold.woff2") format("woff2"),
+    url("../assets/fonts/MyriadPro-Bold.woff") format("woff"),
+    url("../assets/fonts/MyriadPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Myriad_Pro_Regular';
-    src: url('../assets/fonts/MyriadPro-Regular.woff2') format('woff2'),
-        url('../assets/fonts/MyriadPro-Regular.woff') format('woff'),
-        url('../assets/fonts/MyriadPro-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Myriad_Pro_Regular";
+  src: url("../assets/fonts/MyriadPro-Regular.woff2") format("woff2"),
+    url("../assets/fonts/MyriadPro-Regular.woff") format("woff"),
+    url("../assets/fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Animations */
 @-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .fadeIn {
@@ -65,11 +65,9 @@
 /*Global Styles*/
 html,
 body {
-    width: 100%;
-    height: 100%;
-    font-family: $regular-font;
-    position: relative;
-    margin: 0;
+  font-family: $regular-font;
+  position: relative;
+  margin: 0;
 }
 
 h1,
@@ -81,20 +79,66 @@ h6,
 p,
 ul,
 li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-figure,blockquote {
-    margin: 0;
+figure,
+blockquote {
+  margin: 0;
 }
 
 .content {
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.floating {
+  &__whatsapp {
+    position: fixed;
+    bottom: 18%;
+    right: 0;
+    background-color: $third-color;
+    padding: 10px 0 10px 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 135px;
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      background-color: $secondary-color;
+    }
+    &_link {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        margin-right: 10px;
+      }
+      span {
+        color: #fff;
+        display: block;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .floating {
+    &__whatsapp {
+      bottom: 5%;
+      width: 120px;
+      &_link {
+        img {
+          width: 30px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }
