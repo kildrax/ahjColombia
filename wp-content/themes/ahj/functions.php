@@ -22,6 +22,10 @@ function ahj_register_scripts() {
 	if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+    if ( is_page("nosotros")) {
+        wp_enqueue_script( 'nosotros-js', get_template_directory_uri() . '/minjs/nosotros.min.js', false, $theme_version, true );
+        //wp_enqueue_script( 'nosotros-js', get_template_directory_uri() . '/js/nosotros.js', false, $theme_version, true );
+    }
 	wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/minjs/slider.min.js', false, $theme_version, true );
 }
 

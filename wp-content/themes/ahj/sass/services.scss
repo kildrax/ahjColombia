@@ -1,13 +1,54 @@
+.services {
+  margin: 60px 0;
+  &__paralaxFigure {
+    margin: 60px 0;
+    background-image: url("../assets/img/travel.jpg");
+    min-height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.baking {
+      background-image: url("../assets/img/bakingPhoto.jpg");
+    }
+  }
+}
+
 .services-ahj {
+  &__titulo_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 0 60px;
+    margin-bottom: 30px;
+    &_h2 {
+      font-size: 40px;
+      font-family: $bold-font;
+      color: $primary-color;
+    }
+    &_figure {
+      width: 250px;
+      &_logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
   &__element {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     &--reverse {
       flex-direction: row-reverse;
     }
     &-content {
-      height: 600px;
+      height: 250px;
       width: 52.5%;
       position: relative;
       &-img {
@@ -21,8 +62,8 @@
           position: absolute;
           top: 0;
           right: 0;
-          border-top: 600px solid white;
-          border-left: 80px solid transparent;
+          border-top: 250px solid white;
+          border-left: 50px solid transparent;
           width: 0;
         }
       }
@@ -32,20 +73,20 @@
           position: absolute;
           top: 0;
           left: 0;
-          border-top: 600px solid white;
-          border-right: 80px solid transparent;
+          border-top: 250px solid white;
+          border-right: 50px solid transparent;
           width: 0;
         }
       }
     }
     &-info {
       width: 40%;
-      padding: 120px 0 40px 0px;
+      padding: 0px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin: 0 auto;
+      margin: auto;
       &-title {
         text-align: center;
         font-size: 30px;
@@ -58,7 +99,7 @@
         font-size: 18px;
         line-height: 25px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0px auto 20px;
       }
       &-btn {
         margin-left: auto;
@@ -66,6 +107,10 @@
         padding: 5px 10px;
         color: $third-color;
         margin-right: 0px;
+        &:hover {
+          color: #fff;
+          background-color: $third-color;
+        }
         &--reverse {
           margin-right: auto;
           margin-left: 0px;
@@ -74,8 +119,288 @@
     }
   }
 }
+
+.services-granChef {
+  &_content {
+    background-color: $primary-color;
+    padding: 40px 60px;
+    margin-top: 30px;
+    color: #fff;
+    &_subtitle {
+      text-align: center;
+      font-size: 25px;
+    }
+    &_duration {
+      text-align: center;
+      display: block;
+      font-size: 18px;
+    }
+    &_wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 50px auto 20px;
+      &_wrap {
+        padding: 0 40px;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_figure {
+          width: 100px;
+          margin-bottom: 15px;
+          &_icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        &_info {
+          width: 100%;
+          h4 {
+            text-align: center;
+            margin: 20px 0 15px 0px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+          ul {
+            li {
+              margin-bottom: 10px;
+              display: flex;
+              align-items: center;
+              font-size: 15px;
+              &:before {
+                content: "";
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+                width: 34px;
+                height: 24px;
+                display: block;
+                margin-right: 10px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          &_schedule {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 15px;
+            p {
+              &:first-child {
+                font-family: $semibold-font;
+              }
+            }
+          }
+        }
+        &:first-child {
+          .services-granChef_content_wrapper_wrap_info {
+            ul {
+              li {
+                &:first-child {
+                  &::before {
+                    background-image: url("../assets/img/icons/pan.png");
+                  }
+                }
+                &:nth-child(2) {
+                  &::before {
+                    background-image: url("../assets/img/icons/baking_mass.png");
+                  }
+                }
+                &:nth-child(3) {
+                  &::before {
+                    background-image: url("../assets/img/icons/bake.png");
+                  }
+                }
+                &:nth-child(4) {
+                  &::before {
+                    background-image: url("../assets/img/icons/masa.png");
+                  }
+                }
+                &:nth-child(5) {
+                  &::before {
+                    background-image: url("../assets/img/icons/baking.png");
+                  }
+                }
+                &:last-child {
+                  &::before {
+                    background-image: url("../assets/img/icons/baking_1.png");
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          .services-granChef_content_wrapper_wrap_info {
+            ul {
+              li {
+                &:first-child {
+                  &::before {
+                    background-image: url("../assets/img/icons/certificate.png");
+                  }
+                }
+                &:nth-child(2) {
+                  &::before {
+                    background-image: url("../assets/img/icons/id-card.png");
+                  }
+                }
+                &:nth-child(3) {
+                  &::before {
+                    background-image: url("../assets/img/icons/document.png");
+                  }
+                }
+                &:last-child {
+                  &::before {
+                    background-image: url("../assets/img/icons/camera.png");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &_contact {
+      text-align: center;
+      p {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          content: "";
+          background-image: url("../assets/img/icons/phone-call.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 24px;
+          height: 24px;
+          display: block;
+          margin-right: 10px;
+        }
+      }
+    }
+    &.segundaOferta {
+      background-color: $primary-gray-color;
+      .services-granChef_content_wrapper {
+        .services-granChef_content_wrapper_wrap {
+          &:first-child {
+            .services-granChef_content_wrapper_wrap_info {
+              ul {
+                li {
+                  &:first-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/bartender.png");
+                    }
+                  }
+                  &:nth-child(2) {
+                    &::before {
+                      background-image: url("../assets/img/icons/barra-de-bar.png");
+                    }
+                  }
+                  &:nth-child(3) {
+                    &::before {
+                      background-image: url("../assets/img/icons/cerveza.png");
+                    }
+                  }
+                  &:nth-child(4) {
+                    &::before {
+                      background-image: url("../assets/img/icons/shaker.png");
+                    }
+                  }
+                  &:nth-child(5) {
+                    &::before {
+                      background-image: url("../assets/img/icons/bartender_shaker.png");
+                    }
+                  }
+                  &:last-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/martini.png");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.terceraOferta {
+      background-color: $third-color;
+      .services-granChef_content_wrapper {
+        .services-granChef_content_wrapper_wrap {
+          &:first-child {
+            .services-granChef_content_wrapper_wrap_info {
+              ul {
+                li {
+                  &:first-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/cocinero_1.png");
+                    }
+                  }
+                  &:nth-child(2) {
+                    &::before {
+                      background-image: url("../assets/img/icons/sombrero-de-cocinero.png");
+                    }
+                  }
+                  &:last-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/cocinero.png");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.cuartaOferta {
+      background-color: $secondary-gray-color;
+      .services-granChef_content_wrapper {
+        .services-granChef_content_wrapper_wrap {
+          &:first-child {
+            .services-granChef_content_wrapper_wrap_info {
+              ul {
+                li {
+                  &:first-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/travel.png");
+                    }
+                  }
+                  &:nth-child(2) {
+                    &::before {
+                      background-image: url("../assets/img/icons/destination.png");
+                    }
+                  }
+                  &:last-child {
+                    &::before {
+                      background-image: url("../assets/img/icons/travel-map.png");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: $breakpoint-mobile) {
+  .services {
+    margin: 30px 0;
+  }
   .services-ahj {
+    &__titulo_logo {
+      padding: 0 30px;
+      &_h2 {
+        font-size: 30px;
+        text-align: center;
+      }
+    }
     &__element {
       flex-direction: column;
       &--reverse {
@@ -83,7 +408,7 @@
       }
       &-content {
         width: 100%;
-        height: 400px;
+        height: 300px;
         &-img {
         }
         &--right-slice {
@@ -111,6 +436,22 @@
           margin-top: 15px;
           &--reverse {
             margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  .services-granChef {
+    &_content {
+      &_wrapper {
+        flex-direction: column;
+        &_wrap {
+          border-bottom: 2px solid #fff;
+          width: 90%;
+          margin: 0 auto 30px;
+          padding: 0 0 30px;
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }

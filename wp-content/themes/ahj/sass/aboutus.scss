@@ -105,27 +105,40 @@
     position: relative;
     width: 100%;
     height: 700px;
-    &-img {
+    &-images {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
     }
     &-countries {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      width: 50%;
+      width: 35%;
       background-color: rgba(1, 70, 187, 0.6);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      &-content {
+      &-button {
+        border: 0;
+        background-color: transparent;
         color: #fff;
-        font-size: 35px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
         font-family: $bold-font;
-        &-list {
-          text-align: center;
+        &:hover {
+          opacity: 0.5;
         }
       }
     }

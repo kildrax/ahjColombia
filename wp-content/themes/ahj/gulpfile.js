@@ -33,6 +33,6 @@ gulp.task('scripts', () =>
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', gulp.series('sass'));
-  // gulp.watch('app/js/*.js', gulp.series('scripts'));
+  gulp.watch('./js/*.js', gulp.series('scripts'));
   // gulp.watch('app/img/*', gulp.series('images'));
 });
